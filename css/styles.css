@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    transition: 1s;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: blue;
+}
+.circles {
+    width: 600px;
+    border: 5px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 15px;
+}
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 15px 15px 0;
+    cursor: pointer;
+}
+.invisible {
+    opacity: 0;
+    animation: disappear 0.4s;
+    pointer-events: none;
+}
+.timer {
+    width: 600px;
+    border: 5px solid white;
+    height: 20px;
+    padding: 5px 0;
+    display: flex;
+    margin-top: 20px;
+}
+.timer div {
+    margin: 0 5px;
+    background-color: white;
+}
+.gameStart {
+    content: "play";
+    margin-top: 40px;
+    padding: 20px 50px;
+    text-transform: uppercase;
+    appearance: none;
+    border: 3px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.gameStart:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.restart {
+    margin-top: 40px;
+    padding: 20px 50px;
+    text-transform: uppercase;
+    appearance: none;
+    border: 3px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    content: "restart";
+}
+.restart:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.play {
+    width: 610px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+@keyframes disappear {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    5% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    98% {
+        transform: scale(0.001);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.001);
+        opacity: 1;
+    }
+}
+
+
+
+@media screen and (max-width: 500px) {
+
+    .circles {
+        width: 350px;
+    }
+    .circle {
+        width: 100px;
+        height: 100px;
+        margin: 8px 8px 0;
+    }
+    .timer {
+        width: 350px;
+        height: 30px;
+        padding: 5px 0;
+    }
+    .timer div {
+        margin: 0 5px;
+        background-color: white;
+    }
+
+}
