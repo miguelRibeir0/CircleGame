@@ -25,6 +25,7 @@ body {
     background-color: white;
     margin: 15px 15px 0;
     cursor: pointer;
+    touch-action: manipulation;
 }
 .invisible {
     opacity: 0;
@@ -107,7 +108,7 @@ body {
 
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 750px) {
 
     .circles {
         width: 350px;
