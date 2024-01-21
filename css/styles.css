@@ -10,6 +10,7 @@ body {
     justify-content: center;
     flex-direction: column;
     background-color: blue;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 .circles {
     width: 600px;
@@ -79,6 +80,54 @@ body {
     display: flex;
     justify-content: center;
 }
+.cardPopUp {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    height: 80dvh;
+    width: 70vw;
+    background-color: white;
+    border-radius: 20px;
+    margin: 50px;
+}
+.cardInfo {
+    margin: 50px;
+}
+.card h1 {
+    font-size: 3rem;
+    margin-bottom: 5dvh;
+    font-weight: 700;
+}
+.card .cardInfo p {
+    font-size: 1.5rem;
+    margin-bottom: 10dvh;
+}
+.card span {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.card span p {
+    padding-bottom: 10px;
+}
+.card span p:first-child {
+    border-bottom: 3px solid blue;
+}
+.card span p:nth-child(2) {
+    border-bottom: 3px solid green;
+}
+.card span p:nth-child(3) {
+    border-bottom: 3px solid purple;
+}
+.card span p:last-child {
+    border-bottom: 3px solid red;
+}
 
 
 
@@ -126,6 +175,9 @@ body {
     .timer div {
         margin: 0 5px;
         background-color: white;
+    }
+    .play {
+        width: 100%;
     }
 
 }
