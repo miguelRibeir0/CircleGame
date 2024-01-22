@@ -4,6 +4,8 @@ const circles = document.querySelectorAll(".circle");
 const timerContainer = document.querySelector(".timer");
 const startButton = document.querySelector(".gameStart");
 const playContainer = document.querySelector(".play");
+const cardPopUp = document.querySelector(".cardPopUp");
+const cardBtn = document.querySelector(".card div:last-child button");
 
 let score = 0;
 let timer = 0;
@@ -280,3 +282,21 @@ restart4.addEventListener("click", () => {
     restart4.classList.add("invisible");
     lvl4(5);
 });
+
+function PopUpAnimation() {
+    cardPopUp.classList.add("visible");
+    setTimeout(() => {
+        cardPopUp.style.display = "flex";
+    }, 500);
+
+    cardBtn.addEventListener("click", () => {
+        cardPopUp.classList.remove("visible");
+        cardPopUp.style.display = "none";
+    })
+    cardPopUp.addEventListener("click", (event) => {
+        if (event.target === cardPopUp) {
+            cardPopUp.classList.remove("visible");
+        cardPopUp.style.display = "none";
+        }
+    })
+}

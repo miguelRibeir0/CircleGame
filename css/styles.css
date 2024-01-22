@@ -85,33 +85,37 @@ body {
     width: 100vw;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
 .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     height: 80dvh;
     width: 70vw;
     background-color: white;
     border-radius: 20px;
-    margin: 50px;
 }
 .cardInfo {
-    margin: 50px;
+    margin: 50px 50px 0 50px;
 }
 .card h1 {
     font-size: 3rem;
     margin-bottom: 5dvh;
     font-weight: 700;
 }
-.card .cardInfo p {
+.card .cardInfo p{
     font-size: 1.5rem;
-    margin-bottom: 10dvh;
+    margin-bottom: 5dvh;
 }
 .card span {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    margin: 8dvh 0;
 }
 .card span p {
     padding-bottom: 10px;
@@ -128,6 +132,30 @@ body {
 .card span p:last-child {
     border-bottom: 3px solid red;
 }
+.card div:last-child {
+    margin-bottom: 50px;
+}
+#last {
+    margin-bottom: 2dvh;
+}
+.card div:last-child button {
+    padding: 20px 40px;
+    font-size: 1.3rem;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    border-radius: 7px;
+    transition: background-color 0.5s;
+}
+.card div:last-child button:hover {
+    background-color: rgba(0, 0, 255, 0.5);
+}
+.visible {
+    animation: popUp 1s;
+}
+
 
 
 
@@ -155,6 +183,14 @@ body {
     }
 }
 
+@keyframes popUp {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 
 @media screen and (max-width: 750px) {
